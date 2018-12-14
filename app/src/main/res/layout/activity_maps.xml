@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/perul"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentTop="true">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="298dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="80dp"
+            android:ems="10"
+            android:hint="Search Location...."
+            android:inputType="textPersonName"
+            android:textColorHint="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="2dp" />
+
+        <ImageButton
+            android:id="@+id/search_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:onClick="onClick"
+            android:src="@mipmap/search"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/perul"
+        tools:context="com.example.lenovo.maps.MapsActivity" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:src="@mipmap/hospital"
+            android:onClick="onClick"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="9dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@mipmap/school"
+            android:layout_marginStart="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="9dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="272dp"
+            android:src="@mipmap/restaurant"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="9dp" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</RelativeLayout>
+
+
+
